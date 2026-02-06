@@ -1,0 +1,44 @@
+:root {
+    --gold: #C5A059;
+    --black: #000000;
+    --dark: #1A1A1A;
+    --white: #FFFFFF;
+    --gray: #F9F9F9;
+}
+
+body { margin: 0; font-family: 'Playfair Display', serif; background: var(--white); }
+
+.navbar {
+    background: var(--black);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 5%; position: sticky; top: 0; z-index: 100;
+}
+
+.logo { color: var(--gold); font-size: 1.8rem; font-weight: bold; letter-spacing: 4px; }
+.links a { color: var(--white); text-decoration: none; margin-left: 25px; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+.links a:hover { color: var(--gold); }
+
+.container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+.hero {
+    height: 60vh; background: var(--dark); display: flex; flex-direction: column;
+    justify-content: center; align-items: center; color: var(--white); text-align: center;
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+
+.card {
+    border: 1px solid #eee; padding: 20px; text-align: center;
+    transition: 0.4s; background: var(--white);
+}
+.card:hover { border-color: var(--gold); transform: translateY(-5px); }
+
+.btn-gold {
+    background: var(--gold); color: var(--white); border: none;
+    padding: 12px 30px; text-transform: uppercase; cursor: pointer; transition: 0.3s; text-decoration: none;
+}
+.btn-gold:hover { background: var(--black); }
+
+input { padding: 12px; border: 1px solid #ddd; width: 100%; margin-bottom: 15px; }
+
+.stat-card { background: var(--dark); color: var(--white); padding: 30px; border-radius: 4px; }

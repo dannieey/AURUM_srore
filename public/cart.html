@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shopping Bag | AURUM</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AURUM</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html" style="color: #C5A059;">Cart</a>
+            <a href="profile.html">Profile</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 1000px; margin: 60px auto; padding: 0 20px; min-height: 60vh;">
+        <h2 style="font-family: 'serif'; font-size: 2.5rem; margin-bottom: 40px; text-align: left; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+            Your Shopping Bag
+        </h2>
+
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; align-items: start;">
+
+            <div id="cart-items" style="display: flex; flex-direction: column; gap: 20px;">
+                </div>
+
+            <div id="cart-summary-box" style="background: #fdfdfd; padding: 30px; border-radius: 15px; border: 1px solid #eee; position: sticky; top: 100px;">
+                <h3 style="font-family: 'serif'; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">Order Summary</h3>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 15px; color: #666;">
+                    <span>Subtotal</span>
+                    <span id="subtotal-price">$0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 25px; color: #666;">
+                    <span>Shipping</span>
+                    <span style="color: #C5A059; font-weight: bold;">Complimentary</span>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 30px; padding-top: 20px; border-top: 2px solid #222;">
+                    <span style="font-weight: bold; font-size: 1.2rem;">Total</span>
+                    <span id="total-price" style="font-weight: bold; font-size: 1.5rem; color: #222;">$0</span>
+                </div>
+
+                <button class="btn-gold" style="width: 100%; padding: 18px; font-weight: bold; letter-spacing: 2px; cursor: pointer;" onclick="app.checkout()">
+                    PLACE ORDER
+                </button>
+
+                <p style="text-align: center; font-size: 0.8rem; color: #bbb; margin-top: 15px;">
+                    Secure Checkout • Insured Delivery
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = () => {
+            if (typeof app !== 'undefined' && app.loadCart) {
+                app.loadCart();
+            }
+        };
+    </script>
+</body>
+</html>

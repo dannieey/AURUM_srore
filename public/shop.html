@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Shop | Jewelry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar"><div class="logo">AURUM</div><div class="links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="cart.html">Cart</a><a href="profile.html">Profile</a><a href="admin.html">Admin</a></div></nav>
+    <div class="container">
+        <h2>Our Collection</h2>
+        <div class="filters" style="margin-bottom: 30px;">
+            <input type="text" id="search" placeholder="Search jewelry..." oninput="app.loadCatalog()"
+                   style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1rem;">
+        </div>
+        <div id="product-grid" class="grid"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>window.onload = () => app.loadCatalog();</script>
+</body>
+</html>

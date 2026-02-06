@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AURUM Luxury</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AURUM</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="cart.html">Cart</a>
+            <a href="profile.html">Profile</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>User Profile</h1>
+        
+        <div id="profile-data">
+            <div class="stat-card">
+                <p>Loading your luxurious collection...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Как только страница загрузится, вызываем функцию загрузки профиля из main.js
+        window.onload = () => {
+            if (typeof app !== 'undefined' && app.loadProfile) {
+                app.loadProfile();
+            } else {
+                console.error("App logic not found. Check js/main.js");
+            }
+        };
+    </script>
+</body>
+</html>

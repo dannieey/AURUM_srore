@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Product Details | AURUM</title>
+</head>
+<body>
+    <nav class="navbar"><div class="logo">AURUM</div><div class="links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="cart.html">Cart</a><a href="profile.html">Profile</a><a href="admin.html">Admin</a></div></nav>
+    
+    <div class="container">
+        <div id="product-detail-view">
+            <p>Loading exquisite details...</p>
+        </div>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+        
+        <div class="review-section">
+            <h3>Customer Experience</h3>
+            <div id="reviews-list"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Запуск функции при загрузке
+        window.onload = () => app.loadProductDetail();
+    </script>
+</body>
+</html>
