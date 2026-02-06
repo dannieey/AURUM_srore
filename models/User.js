@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
     location: String,
     joinedDate: String,
+    // Используем этот массив как единое хранилище для корзины/вишлиста
     wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }]
 });
 
